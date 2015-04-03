@@ -1,0 +1,51 @@
+{
+  "name": "well",
+  "version": "0.1.0",
+  "main": "bin/well",
+  "description": "A well to send JSON data into",
+  "homepage": "https://github.com/NicolaOrritos/well",
+  "bugs": "https://github.com/NicolaOrritos/well/issues",
+  "author": {
+    "name": "Nicola Orritos",
+    "email": "nicola.orritos@gmail.com",
+    "url": "http://nicolaorritos.github.io"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/NicolaOrritos/well"
+  },
+  "license": "MIT",
+  "files": [
+    "bin",
+    "etc",
+    "lib"
+  ],
+  "keywords": [
+    "well",
+    "json",
+    "store"
+  ],
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-jshint": "^0.10.0",
+    "grunt-contrib-nodeunit": "^0.3.3",
+    "jshint-stylish": "^0.2.0",
+    "load-grunt-tasks": "^0.4.0",
+    "time-grunt": "^0.3.1"
+  },
+  "scripts": {
+    "test": "grunt"
+  },
+  "bin": {
+    "well": "bin/well"
+  },
+  "preferGlobal": "true",
+  "dependencies": {
+    "bluebird": "^2.8.2",
+    "bunyan": "^1.3.4",
+    "mongodb": "^2.0.25",
+    "progenic": "^0.9.0",
+    "restify": "^2.8.3",
+    "restify-cookies": "^0.1.1"
+  }
+}

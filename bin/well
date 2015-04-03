@@ -1,0 +1,19 @@
+#!/usr/bin/env node
+
+var Logger   = require('bunyan');
+var progenic = require('progenic');
+
+var log = new Logger(
+{
+    name: 'well',
+    
+    streams:
+    [
+        {
+            stream: process.stdout,
+            level: 'debug'
+        }
+    ]
+});
+
+progenic.run('well', '../lib/main', 1, false, log);
