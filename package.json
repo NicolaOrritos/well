@@ -1,5 +1,5 @@
 {
-  "name": "well",
+  "name": "node-well",
   "version": "0.1.0",
   "main": "bin/well",
   "description": "A well to send JSON data into",
