@@ -1,6 +1,12 @@
 # Well
 _Well_ is a fast, lightweight service that accepts JSON documents and stores them away into MongoDB servers.
 
+
+
+## "WELL" IS ALMOST READY FOR PRIME-TIME, BUT IT'S NOT THERE YET: THIS NOTICE WILL DISAPPEAR ONCE IT'S DONE.
+
+
+
 ## Getting Started
 First things first, install it:
 ```Bash
