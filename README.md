@@ -91,6 +91,10 @@ This is a typical (pseudo-coded) request:
 After posting it the previous request is simply routed to the MongoDB instance configured as "mybucket" in _/etc/well.conf_.  
 Data POST-ed to _http://localhost:6666/well/push_ will be routed to the default bucket instead.
 
+Here's the answer returned by _well_ after the POST:
+
+    {"status":"ok"}
+
 
 ## License
 
