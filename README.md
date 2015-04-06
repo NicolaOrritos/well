@@ -10,7 +10,7 @@ _Well_ is a fast, lightweight service that accepts JSON documents and stores the
 ## Getting Started
 First things first, install it:
 ```Bash
-$ sudo npm install -g well
+$ sudo npm install -g node-well
 ```
 Then configure buckets and the _well_ server:
 ```Bash
