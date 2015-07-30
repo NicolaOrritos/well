@@ -24,31 +24,41 @@ module.exports = function(grunt) {
             },
             lib: {
                 src: ['lib/**/*.js']
+            },
+            test: {
+                src: ['test/**/*.js']
             }
+        },
+        mochacli: {
+            options: {
+                reporter: 'nyan',
+                bail: true
+            },
+            all: ['test/*.js']
         }
     });
-    
+
     grunt.registerTask('start', 'Start Well', function()
     {
         var done = this.async();
-        
+
         grunt.log.writeln('Running server at "%s"...', process.cwd());
-        
+
         process.chdir('bin');
-        
+
         grunt.log.writeln('Moved to "%s"...', process.cwd());
-        
+
         var spawn = require('child_process').spawn;
-        
+
         var child = spawn('./well', [], {'cwd': process.cwd()});
-        
+
         child.stdout.on('data', function (data)
         {
             grunt.log.write('' + data);
         });
-        
+
         child.stderr.setEncoding('utf8');
-        
+
         child.stderr.on('data', function (data)
         {
             if (/^execvp\(\)/.test(data))
@@ -60,12 +70,12 @@ module.exports = function(grunt) {
         child.on('close', function (code)
         {
             grunt.log.writeln('child process exited with code ' + code);
-            
+
             done();
         });
     });
-    
+
 
     // Default task.
-    grunt.registerTask('default', ['jshint']);
+    grunt.registerTask('default', ['jshint', 'mochacli']);
 };

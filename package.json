@@ -1,6 +1,6 @@
 {
   "name": "node-well",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "main": "bin/well",
   "description": "A well to send JSON data into",
   "homepage": "https://github.com/NicolaOrritos/well",
@@ -32,6 +32,7 @@
     "grunt-mocha-cli": "^1.13.0",
     "jshint-stylish": "^0.2.0",
     "load-grunt-tasks": "^0.4.0",
+    "request": "^2.60.0",
     "time-grunt": "^0.3.1"
   },
   "scripts": {
@@ -42,12 +43,11 @@
   },
   "preferGlobal": "true",
   "dependencies": {
-    "bluebird": "^2.8.2",
-    "bunyan": "^1.3.4",
-    "mongodb": "^2.0.25",
+    "bluebird": "^2.9.34",
+    "bunyan": "^1.4.0",
+    "mongodb": "^2.0.39",
     "progenic": "^0.9.0",
     "restify": "^2.8.5",
-    "restify-cookies": "^0.1.1",
     "sjl": "^0.4.0"
   }
 }
