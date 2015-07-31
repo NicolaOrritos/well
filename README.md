@@ -14,7 +14,7 @@ $ sudo npm install -g node-well
 ```
 Then configure buckets and the _well_ server:
 ```Bash
-$ sudo touch /etc/well.js
+$ sudo touch /etc/well.conf
 ```
 Here's the typical configuration:
 ```JSON
@@ -44,14 +44,14 @@ But you can add as many buckets as needed:
             "PORT": 27017,
             "DB":   "DefaultBucket"
         },
-        
+
         "second":
         {
             "HOST": "10.0.0.123",
             "PORT": 27017,
             "DB":   "SecondBucket"
         },
-        
+
         "third":
         {
             "HOST": "10.0.0.123",
