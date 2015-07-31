@@ -2,11 +2,6 @@
 _Well_ is a fast, lightweight service that accepts JSON documents and stores them away into MongoDB servers.
 
 
-
-## "WELL" IS ALMOST READY FOR PRIME-TIME, BUT IT'S NOT THERE YET: THIS NOTICE WILL DISAPPEAR ONCE IT'S DONE.
-
-
-
 ## Getting Started
 First things first, install it:
 ```Bash
@@ -77,21 +72,16 @@ Provided it's configured to listen on port 6666 _well_ will accept incoming *POS
     http://localhost:6666/well/push/<BUCKET>
 
 First one pushes to the default bucket while the second one to a specific one.  
-This is a typical (pseudo-coded) request:
+This is a typical request, posting a simple JSON to the server:
+```Bash
+curl -X POST -H "Content-Type: application/json" -d '{"key":"value"}' localhost:6666/well/push/mybucket
+```
 
-    POST http://localhost:6666/well/push/mybucket
-    {
-        "key": "value",
-        "object":
-        {
-            "array": [1, 2, 3]
-        }
-    }
-
+**Content-Type must be "application/json".**  
 After posting it the previous request is simply routed to the MongoDB instance configured as "mybucket" in _/etc/well.conf_.  
 Data POST-ed to _http://localhost:6666/well/push_ will be routed to the default bucket instead.
 
-Here's the answer returned by _well_ after the POST:
+Here's the answer returned by _well_ when the POST is successful:
 
     {"status":"ok"}
 
