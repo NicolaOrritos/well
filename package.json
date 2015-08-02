@@ -1,6 +1,6 @@
 {
   "name": "node-well",
-  "version": "0.6.0",
+  "version": "0.8.0",
   "main": "bin/well",
   "description": "A well to send JSON data into",
   "homepage": "https://github.com/NicolaOrritos/well",
@@ -45,8 +45,10 @@
   "dependencies": {
     "bluebird": "^2.9.34",
     "bunyan": "^1.4.0",
+    "hiredis": "^0.4.0",
     "mongodb": "^2.0.39",
     "progenic": "^0.9.0",
+    "redis": "^0.12.1",
     "restify": "^2.8.5",
     "sjl": "^0.4.0"
   }
