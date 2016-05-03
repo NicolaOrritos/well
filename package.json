@@ -1,6 +1,6 @@
 {
   "name": "node-well",
-  "version": "0.8.0",
+  "version": "1.0.0",
   "main": "bin/well",
   "description": "A well to send JSON data into",
   "homepage": "https://github.com/NicolaOrritos/well",
@@ -25,31 +25,29 @@
     "json",
     "store"
   ],
-  "devDependencies": {
-    "grunt": "^0.4.5",
-    "grunt-contrib-jshint": "^0.10.0",
-    "grunt-contrib-nodeunit": "^0.3.3",
-    "grunt-mocha-cli": "^1.13.0",
-    "jshint-stylish": "^0.2.0",
-    "load-grunt-tasks": "^0.4.0",
-    "request": "^2.60.0",
-    "time-grunt": "^0.3.1"
-  },
-  "scripts": {
-    "test": "grunt"
-  },
   "bin": {
     "well": "bin/well"
   },
   "preferGlobal": "true",
   "dependencies": {
-    "bluebird": "^2.9.34",
-    "bunyan": "^1.4.0",
-    "hiredis": "^0.4.0",
-    "mongodb": "^2.0.39",
-    "progenic": "^0.9.0",
-    "redis": "^0.12.1",
-    "restify": "^2.8.5",
+    "bunyan": "^1.8.1",
+    "hiredis": "^0.4.1",
+    "mongodb": "^2.1.18",
+    "progenic": "^2.2.2",
+    "redis": "^2.6.0-2",
+    "restify": "^4.0.4",
     "sjl": "^0.4.0"
+  },
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-jshint": "^1.0.0",
+    "grunt-mocha-cli": "^2.1.0",
+    "jshint-stylish": "^2.2.0",
+    "load-grunt-tasks": "^3.5.0",
+    "request": "^2.72.0",
+    "time-grunt": "^1.3.0"
+  },
+  "scripts": {
+    "test": "grunt"
   }
 }

@@ -1,19 +1,21 @@
+
 /* global describe, it */
+
 'use strict';
 
-var assert  = require('assert');
-var request = require('request');
-var CONF    = require('../lib/conf');
+const assert  = require('assert');
+const request = require('request');
+const CONF    = require('../lib/conf');
 
 
-var baseURL = 'http://localhost:' + CONF.PORT + '/well/push';
+const baseURL = 'http://localhost:' + CONF.PORT + '/well/push';
 
-var doc     = JSON.stringify({key: 'value'});
+const doc     = JSON.stringify({key: 'value'});
 
 
-describe('"well" server', function()
+describe('"well" server', () =>
 {
-    it('must answer to pushes on the default bucket', function(done)
+    it('must answer to pushes on the default bucket', done =>
     {
         request.post(
         {
@@ -29,7 +31,7 @@ describe('"well" server', function()
             assert(err == null, 'There was an error pushing to the default bucket. ' + err);
             assert(res.statusCode === 200, 'Status code is not 200, but ' + res.statusCode + ' instead');
 
-            var result = JSON.parse(res.body);
+            const result = JSON.parse(res.body);
 
             assert(result);
             assert(result.status === 'ok');
@@ -38,7 +40,7 @@ describe('"well" server', function()
         });
     });
 
-    it('must reply with 404 when pushing to non existent buckets', function(done)
+    it('must reply with 404 when pushing to non existent buckets', done =>
     {
         request.post(
         {
@@ -58,7 +60,7 @@ describe('"well" server', function()
         });
     });
 
-    it('must reply with 400 when pushing non-JSON data', function(done)
+    it('must reply with 400 when pushing non-JSON data', done =>
     {
         request.post(
         {

@@ -11,5 +11,6 @@
   "boss": true,
   "eqnull": true,
   "laxbreak": true,
-  "node": true
+  "node": true,
+  "esversion": 6
 }
